@@ -9,12 +9,12 @@ body{
 .image{
 	position: relative;
     width: 100%}
-.top-left{
+.title{
 	position: absolute;
 	background-color: #3b158e;
 	font-family: verdana;
 	border-style: solid;
-    border-width: 5px;
+    border-width: 5px 5px 5px 20px;
     border-color: #3b158e;
 	font-size: 24px;
 	top: 0px;
@@ -22,10 +22,29 @@ body{
 	width: 100%;}
 .list li{
 	position: absolute;
+	background-color: black;
+	border-style: solid;
+	border-width: 2px 5px 2px 5px;
 	display: block;
-	top: 30px;
-	left: 16px;
-	width: 100%;
+	top: 60px;
+	left: 30px;
 	text-align: left;
 	font-family: verdana;
 	font-size: 16px;}
+li:nth-child(2) {
+	top: 85px;}
+li:nth-child(3) {
+	top: 110px;}
+p{
+	position: absolute;
+	background-color: black;
+	border-style: solid;
+	border-width: 2px 5px 2px 5px;
+	display: block;
+	bottom: 0px;
+	left: 30px;
+	text-align: left;
+	font-family: verdana;
+	font-size: 16px;
+	margin: 0 2em;}
+}
