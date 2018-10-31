@@ -18,6 +18,8 @@ body{
 .top-left{
 	position: absolute;
 	background-color: #3b158e;
+	font-family: verdana;
+	font-size: 16px;
 	top: 8px;
-	left: 16px;
+	margin-left: 16px;
 	width: 100%;}
