@@ -8,11 +8,14 @@ body{
 	background-position: bottom right;}
 .title h1{
 	background-color: #3b158e;
-	position: relative;
-    left: 0px;
-    top: 0px;}
+	width: 100%;
+	text-align: left;
+	font-family: verdana;
+	font-size: 3px;}
 .title p{
 	background-color: white;
 	width: 100%;
 	padding: 2px;
-	text-align: left;}
+	text-align: left;
+	font-family: arial;
+	font-size: 2px;}
