@@ -9,12 +9,11 @@ body{
 .image{
 	position: relative;
     width: 100%}
-h2{
+.top-left{
 	position: absolute;
-	top: 200px;
-	left: 0;
-	width: 100%;
-}
+	top: 8px;
+	left: 16px;
+	width: 100%;}
 .title h1{
 	background-color: #3b158e;
 	width: 100%;
