@@ -8,8 +8,8 @@ body{
 	background-position: bottom right;}
 .title img{
 	position: fixed;
-    bottom: 0;
-    right: 0;}
+    top: 0;
+    left: 0;}
 .title h1{
 	background-color: #3b158e;
 	width: 100%;
