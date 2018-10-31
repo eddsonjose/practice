@@ -22,6 +22,7 @@ body{
 	width: 100%;}
 .list li{
 	position: absolute;
+	display: block;
 	top: 30px;
 	left: 16px;
 	width: 100%;
