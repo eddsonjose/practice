@@ -13,6 +13,8 @@ body{
 	position: absolute;
 	background-color: #3b158e;
 	font-family: verdana;
+	border-style: solid;
+    border-width: 5px;
 	font-size: 24px;
 	top: 0px;
 	left: 0px;
