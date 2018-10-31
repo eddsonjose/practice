@@ -21,7 +21,8 @@ body{
 	width: 100%;}
 .list{
 	position: absolute;
-	top: 20px;
+	top: 30px;
+	left: 16px;
 	width: 100%;
 	text-align: left;
 	font-family: verdana;
