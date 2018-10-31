@@ -19,6 +19,7 @@ body{
 	width: 100%;}
 .list{
 	position: absolute;
+	top: 20px;
 	width: 100%;
 	text-align: left;
 	font-family: verdana;
