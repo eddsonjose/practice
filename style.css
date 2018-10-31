@@ -4,14 +4,14 @@
 body{
 	width: 100%;
 	height: 100%;
-	background-color: #e6e6e6;
+	background-color: #ebe2ff;
 	background-position: bottom right;}
 .title h1{
 	background-color: #3b158e;
 	width: 100%;
 	height: 30%;
 	padding: 1px;
-	padding-bottom: 1px;
+	padding-bottom: 2px;
 	text-align: left;
 	text-indent: 5px}
 .title p{
