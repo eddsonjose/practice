@@ -8,9 +8,9 @@ body{
 	background-position: bottom right;}
 .title h1{
 	background-color: #3b158e;
-	position: absolute;
-    left: 100px;
-    top: 150px;}
+	position: relative;
+    left: 0px;
+    top: 0px;}
 .title p{
 	background-color: white;
 	width: 100%;
