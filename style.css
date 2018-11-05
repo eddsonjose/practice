@@ -80,14 +80,25 @@ li:nth-child(10) {
 
 li:nth-child(11) {
 	position: relative;
-	top: -759px;
+	top: -1140px;
 	left: 565px;
 }
 
 li:nth-child(12) {
 	position: relative;
 	top: -1140px;
+	left: 0px;
+}
+
+li:nth-child(13) {
+	position: relative;
+	top: -1140px;
 	left: 565px;
 }
 
+li:nth-child(14) {
+	position: relative;
+	top: -1900px;
+	left: 0px;
+}
 }
