@@ -26,7 +26,7 @@ body {
 }
 
 .row {
-    margin: 8px 270px;
+    margin: 8px -16px;
 }
 
 /* Add padding BETWEEN each column */
@@ -50,17 +50,16 @@ body {
 
 
 /* Responsive layout - makes a one column-layout instead of two columns */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
     .column {
         width: 100%;
     }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
     .column {
         width: 100%;
     }
-    
     
 }
