@@ -39,23 +39,7 @@
 				geometry = new THREE.TorusKnotGeometry(200, 70.02, 64, 2, 15, 9.8, 15);
 				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, wireframe: true, wireframeLinewidth: 1});
 				
-				for ( var i = 0; i < geometry.vertices.length; i ++ ) {
-					var vertices = [];
-					for ( var v = 0; v < geometry.vertices.length; v ++ ) {
-						vertices.push( geometry.vertices[ v ].clone() );
-						if ( v === i ) {
-							vertices[ vertices.length - 1 ].x *= 1;
-							vertices[ vertices.length - 1 ].y *= 1;
-							vertices[ vertices.length - 1 ].z *= 1;
-						}
-					}
-					geometry.morphTargets.push( { name: "target" + i, vertices: vertices } );
-				}
-				
 				mesh = new THREE.Mesh(geometry, material);
-				
-				mesh.material.morphTargets = true;
-				
 				mesh.scale.x = mesh.scale.y = mesh.scale.z = 2;
 				scene.add(mesh);
 				
@@ -93,10 +77,6 @@
 				var time = Date.now() * 0.000005;
 				h = ( 360 * ( 1.0 + time ) % 360 ) / 360;
 				material.color.setHSL( h, 0.5, 0.5 );
-				
-				for(var v = 0; v < mesh.geometry.vertices.length; v ++ ){
-  					mesh.morphTargetInfluences[ v ] = Math.random();
-				}
 				
 
 				renderer.render( scene, camera );
