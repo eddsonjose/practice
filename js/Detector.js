@@ -55,4 +55,4 @@ var Detector = {
 		parent.appendChild( element );
 
 	}
-};
+}
