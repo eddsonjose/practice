@@ -8,7 +8,7 @@ var yy = 0;
 var easing = 0.05;
 
   function setup() {
-    createCanvas(width, height, WEBGL);
+    createCanvas(width, height);
     star = new Star();
       
     for (var i = 0; i < 1600; i++) {
