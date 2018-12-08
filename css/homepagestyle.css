@@ -18,6 +18,7 @@ body {
     font-size: 16px;
     justify-content: left;
     padding: 5px;
+    padding-right: 5px;
 }
 
 
@@ -26,12 +27,7 @@ body {
     max-width: 100%;
 }
 
-
-
-
-
-
-
+/* Slideshow ------------------------------------*/
 
 * {margin: 0; padding: 0;}
  
@@ -46,8 +42,6 @@ body {
  margin: 50px auto;
  background: white;
 }
-
-
 
 /*header*/
 header {
