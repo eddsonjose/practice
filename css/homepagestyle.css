@@ -34,9 +34,10 @@ a:link {
 /* Footer (Start) -------------------------------*/
 footer {
         position: absolute;
-        bottom: 20px;
+        bottom: 10px;
         width: 100%;
         height: 50px;
+        text-align: center; 
 }
 
 
