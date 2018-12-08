@@ -6,6 +6,7 @@ body {
     background-color: #dbdbdb;
     font-family: verdana;
     margin: 0px;
+    overflow: hidden;
 }
 
 .header{
@@ -23,4 +24,113 @@ body {
 /* Center website */
 .main {
     max-width: 100%;
+}
+
+
+
+
+
+
+
+
+* {margin: 0; padding: 0;}
+ 
+body {
+ <!-- src: http://subtlepatterns.com/?p=1045 -->
+ background: url('dark_geometric.png');
+}
+ 
+#container {
+ width: 100%;
+ overflow: hidden;
+ margin: 50px auto;
+ background: white;
+}
+
+
+
+/*header*/
+header {
+ width: 800px;
+ margin: 40px auto;
+}
+ 
+header h1 {
+ text-align: center;
+ font: 100 60px/1.5 Helvetica, Verdana, sans-serif;
+ 
+}
+ 
+header p {
+ font: 100 15px/1.5 Helvetica, Verdana, sans-serif;
+ text-align: justify;
+}
+ 
+/*photobanner*/
+ 
+.photobanner {
+ height: 500px;
+ width: 750000px;
+ margin-bottom: 80px;   
+ display: flex;
+}
+
+
+/*keyframe animations*/
+.first {
+ -webkit-animation: bannermove 35s linear infinite;
+    -moz-animation: bannermove 35s linear infinite;
+     -ms-animation: bannermove 35s linear infinite;
+      -o-animation: bannermove 35s linear infinite;
+         animation: bannermove 35s linear infinite;
+}
+ 
+@keyframes "bannermove" {
+ 0% {
+    margin-left: -750px;
+ }
+ 100% {
+    margin-left: -5250px;
+ }
+ 
+}
+ 
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: -750px;
+ }
+ 100% {
+   margin-left: -5250px;
+ }
+ 
+}
+ 
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: -750px;
+ }
+ 100% {
+   margin-left: -5250px;
+ }
+ 
+}
+ 
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: -750px;
+ }
+ 100% {
+   margin-left: -5250px;
+ }
+ 
+}
+ 
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: -750px;
+ }
+ 100% {
+   margin-left: -5250px;
+ }
+ 
 }
