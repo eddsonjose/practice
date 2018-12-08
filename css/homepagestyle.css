@@ -31,9 +31,16 @@ a:link {
     text-decoration: none;
     padding-right: 15px;
 }
+/* Footer (Start) -------------------------------*/
+    .footer{
+        
+    }
 
-/* Slideshow ------------------------------------*/
+/* Footer (End) ---------------------------------*/
 
+
+
+/* Slideshow (Start) ----------------------------*/
 * {margin: 0; padding: 0;}
  
 #container {
@@ -88,7 +95,6 @@ header p {
  100% {
     margin-left: -5250px;
  }
- 
 }
  
 @-moz-keyframes bannermove {
@@ -98,7 +104,6 @@ header p {
  100% {
    margin-left: -5250px;
  }
- 
 }
  
 @-webkit-keyframes "bannermove" {
@@ -108,7 +113,6 @@ header p {
  100% {
    margin-left: -5250px;
  }
- 
 }
  
 @-ms-keyframes "bannermove" {
@@ -118,7 +122,6 @@ header p {
  100% {
    margin-left: -5250px;
  }
- 
 }
  
 @-o-keyframes "bannermove" {
@@ -128,5 +131,5 @@ header p {
  100% {
    margin-left: -5250px;
  }
- 
 }
+/* Slideshow (End) ------------------------------*/
