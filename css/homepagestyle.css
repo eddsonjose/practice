@@ -11,6 +11,8 @@ body {
 
 .header{
     background-color: black;
+    text-align: center; 
+
 }
 
 .title{
@@ -39,8 +41,6 @@ footer {
         height: 50px;
         text-align: center; 
 }
-
-
 /* Footer (End) ---------------------------------*/
 
 
@@ -79,7 +79,7 @@ header p {
 .photobanner {
     height: 500px;
     width: 750000px;
-    margin-bottom: 400px;   
+    margin-bottom: 600px;   
     display: flex;
 }
 
