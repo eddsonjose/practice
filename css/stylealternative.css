@@ -39,6 +39,21 @@ a:link {
 
 
 
+/* Footer (Start) -------------------------------*/
+footer {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    height: 50px;
+    text-align: center; 
+}
+footer a {
+    text-align: center;
+}
+/* Footer (End) ---------------------------------*/
+
+
+
 
 .gallery {
     padding-bottom: 50px;
@@ -87,15 +102,3 @@ a:link {
 
 
 
-/* Footer (Start) -------------------------------*/
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    text-align: center; 
-}
-footer a {
-    text-align: center;
-}
-/* Footer (End) ---------------------------------*/
