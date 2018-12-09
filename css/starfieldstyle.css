@@ -3,6 +3,8 @@ html, body {
   padding: 0;
 }
 canvas {
-	overflow: hidden;
   display: block;
+}
+.starfield {
+	overflow: hidden;
 }
