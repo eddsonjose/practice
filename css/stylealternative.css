@@ -38,29 +38,21 @@ a:link {
 }
 
 
-/* Footer (Start) -------------------------------*/
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    text-align: center; 
-}
-footer a {
-    text-align: center;
-}
-/* Footer (End) ---------------------------------*/
 
 
+.gallery {
+    padding-bottom: 50px;
+}
 
 .row {
     margin: 8px -16px;
+    margin-bottom: 50px;
 }
 
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
-    padding: 8px;
+    padding: 10px;
 }
 
 /* Create two equal columns that floats next to each other */
@@ -91,3 +83,19 @@ footer a {
     }
     
 }
+
+
+
+
+/* Footer (Start) -------------------------------*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center; 
+}
+footer a {
+    text-align: center;
+}
+/* Footer (End) ---------------------------------*/
