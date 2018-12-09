@@ -6,7 +6,7 @@ body {
     background-color: #dbdbdb;
     font-family: Verdana;
     margin: 0px;
-    overflow: hidden;
+    position: relative;
 }
 
 .header{
@@ -16,7 +16,7 @@ body {
     border-style: solid;
     border-width: 0px 0px 5px 0px;
     border-color: #262626;
-
+    overflow: hidden;
 }
 
 .title{
@@ -38,6 +38,18 @@ a:link {
 }
 
 
+/* Footer (Start) -------------------------------*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center; 
+}
+footer a {
+    text-align: center;
+}
+/* Footer (End) ---------------------------------*/
 
 
 
