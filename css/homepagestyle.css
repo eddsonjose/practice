@@ -61,7 +61,7 @@ footer a {
     width: 100%;
     overflow: hidden;
     margin: 0px auto;
-    background: #dbdbdb;
+    background: #262626;
 }
 
 /*header*/
@@ -81,7 +81,7 @@ header a {
     height: 500px;
     width: 750000px;
     margin-top: 0px;
-    margin-bottom: 200px;   
+    margin-bottom: 5px;   
     display: flex;
 }
 
