@@ -37,6 +37,12 @@ a:link {
     padding-left: 15px;
 }
 
+p {
+  font-family: Verdana;
+  text-align: center;
+  color: #9b9b9b;
+  padding-top: 40px;
+}
 
 /* Footer (Start) -------------------------------*/
 footer {
