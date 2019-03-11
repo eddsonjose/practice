@@ -1,0 +1,37 @@
+body {
+  background-color: #111111;
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 60px;
+
+}
+
+h1 {
+  color: pink;
+}
+h2{
+  color: #ced7e5;
+}
+
+img{
+  width: 100%;
+}
+
+.header{
+  background-color: black;
+  padding: 60px;
+  margin: 40px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.portfolio-item{
+  background-color: green;
+  padding: 60px;
+  margin: 40px;
+  border: 2px solid black;
+}
+
+.blue{
+  background-color: blue;
+}
