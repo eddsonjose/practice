@@ -1,16 +1,18 @@
 body {
   background-color: #111111;
   max-width: 1000px;
-  margin: 100px auto;
-  padding: 60px;
-
+  margin: 10px auto;
+  padding: 10px;
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  line-height: 1.6;
 }
 
 h1 {
-  color: pink;
+  color: black;
 }
 h2{
-  color: #ced7e5;
+  color: black;
 }
 
 img{
@@ -18,11 +20,16 @@ img{
 }
 
 .header{
-  background-color: black;
+  background-color: yellow;
   padding: 60px;
   margin: 40px;
   border: 2px solid black;
   text-align: center;
+}
+
+#toggle-text{
+  display: flex;
+  visiblity: hidden;
 }
 
 .portfolio-item{
@@ -34,4 +41,8 @@ img{
 
 .blue{
   background-color: blue;
+}
+
+.red{
+  background-color: red;
 }
