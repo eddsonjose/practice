@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: black;
+  font-family: 'Rubik', sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.paragraph {
+  background-color: white;
+  padding: 100px;
+  text-align: center;
+}
