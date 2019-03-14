@@ -4,8 +4,9 @@ body {
 
 h1 {
   color: black;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 12px;
+  text-align: right;
 }
 
 .header {
