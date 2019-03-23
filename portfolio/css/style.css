@@ -1,18 +1,26 @@
 body {
   background-color: black;
-}
-
-h1 {
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 12px;
-  text-align: right;
+  margin: 0px;
 }
 
 .header {
   background-color: white;
   padding: 20px;
   text-align: center;
+}
+
+/* ----------favicon------------- */
+img {
+  text-align: center;
+  margin-right: 500px;
+}
+/* ------------------------------ */
+
+h1 {
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  display: inline-block;
 }
 
 .paragraph {
