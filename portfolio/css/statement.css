@@ -133,13 +133,13 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   text-align: center;
-  padding: 15px 300px 15px 300px;
+  padding: 15px 500px 15px 500px;
 }
 
 /* ---------------------------------------------------------------------- */
 /* --------------------------------footer-------------------------------- */
 .footer {
-  background-color: #efefef;
+  background-color: #dbdbdb;
   text-align: center;
   padding: 10px;
 }
