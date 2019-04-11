@@ -125,25 +125,43 @@ h1 {
 p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  text-align: center;
+  padding: 10px 300px;
+  position: absolute;
+  top: 75%;
+  left: 0px;
+  color: black;
 }
 
-.paragraph {
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: blue;
+}
+
+/* .paragraph {
   background-color: white;
   color: #7a7a7a;
   margin: 0;
   padding: 10px;
   text-align: center;
-}
+} */
 
-.text {
+/* .text {
   position: absolute;
-  top: 950px;
+  top: 50%;
   left: 0px;
   color: black;
-  margin: 0;
-  padding: 10px 300px;
-  text-align: center;
+} */
 
+/* ---------------------------------------------------------------------- */
+/* --------------------------------footer-------------------------------- */
+.footer {
+  background-color: #efefef;
+  text-align: center;
+  padding: 10px;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -179,17 +197,30 @@ p {
     width: 100%;
   }
 
-  .text {
-    position: absolute;
-    top: 450px;
-    color: black;
-    margin: 0;
-    padding: 10px;
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     text-align: center;
-
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    color: black;
   }
 }
 
+@media screen and (max-width: 800px) {
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    color: black;
+  }
+}
 /* ---------------------------------------------------------------------- */
 /* ------------------------------favicon--------------------------------- */
 
