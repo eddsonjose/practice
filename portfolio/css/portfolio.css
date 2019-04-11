@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #efefef;
+  background-color: #dbdbdb;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -105,6 +105,83 @@ body {
 /* .dropdown:hover .dropbtn {} */
 
 /* ---------------------------------------------------------------------- */
+/* -------------------------Portfolio layout----------------------------- */
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column2 {
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 200px;
+}
+
+.column2 img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+  .column2 {
+    flex: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column2 {
+    flex: 100%;
+    max-width: 100%;
+    padding: 5px;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* ------------------------------favicon--------------------------------- */
+
+img {
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------------text---------------------------------- */
+
+h1 {
+  color: #cccccc;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  letter-spacing: 5px;
+}
+
+h2 {
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-align: center;
+  padding: 20px 10px 15px 10px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+
+.paragraph {
+  background-color: #0d0d0d;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------------- */
 /* -------------if screen width is less than 600px----------------------- */
 
 @media screen and (max-width: 600px) {
@@ -137,33 +214,42 @@ body {
 }
 
 /* ---------------------------------------------------------------------- */
-/* ------------------------------favicon--------------------------------- */
+/* ----if screen width is less than 1000px and greater than 600px-------- */
 
-img {
-  text-align: center;
-}
-
-/* ---------------------------------------------------------------------- */
-/* --------------------------------text---------------------------------- */
-
-h1 {
-  color: #cccccc;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
-  display: inline-block;
-  letter-spacing: 5px;
-}
-
-p {
-  color: #cccccc;
-  font-size: 16px;
-}
-
-.paragraph {
-  background-color: #0d0d0d;
-  margin: 0;
-  padding: 10px;
-  text-align: center;
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+  .middle {
+    width: 100%;
+  }
+  .dropdown {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .backgroundImage {
+    display: none;
+  }
+  .backgroundImageMobile {
+    display: grid;
+    height: 100%;
+    width: 100%;
+  }
+  .text p{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 20px 15px 20px;
+  }
 }
 
 /* ---------------------------------------------------------------------- */

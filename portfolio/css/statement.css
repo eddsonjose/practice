@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #efefef;
+  background-color: #dbdbdb;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -13,6 +13,7 @@ body {
 /* --------------------------background image---------------------------- */
 
 .backgroundImage {
+  position: relative;
   display: block;
   width: 100%;
   padding: 0;
@@ -31,6 +32,10 @@ body {
 .backgroundImageTabletVertical {
   display: none;
 }
+
+/* ---------------------------------------------------------------------- */
+/* ---------------------background image overlay------------------------- */
+
 
 /* ---------------------------------------------------------------------- */
 /* -------------------------------header--------------------------------- */
@@ -105,6 +110,33 @@ body {
 /* .dropdown:hover .dropbtn {} */
 
 /* ---------------------------------------------------------------------- */
+/* --------------------------------text---------------------------------- */
+h1 {
+  color: #cccccc;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  letter-spacing: 5px;
+}
+
+.text h2 {
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-align: center;
+  padding: 20px 10px 15px 10px;
+}
+
+.text p {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 300px 15px 300px;
+}
+
+/* ---------------------------------------------------------------------- */
 /* -------------if screen width is less than 600px----------------------- */
 
 @media screen and (max-width: 600px) {
@@ -132,7 +164,59 @@ body {
   }
 
   .backgroundImageMobile {
+    display: grid;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text p{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 10px 15px 10px;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* ----if screen width is less than 1000px and greater than 600px-------- */
+
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+  .left {
     display: none;
+  }
+  .right {
+    display: none;
+  }
+  .middle {
+    width: 100%;
+  }
+  .dropdown {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .backgroundImage {
+    display: none;
+  }
+
+  .backgroundImageMobile {
+    display: grid;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text p{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 20px 15px 20px;
   }
 }
 
@@ -142,29 +226,3 @@ body {
 img {
   text-align: center;
 }
-
-/* ---------------------------------------------------------------------- */
-/* --------------------------------text---------------------------------- */
-
-h1 {
-  color: #cccccc;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
-  display: inline-block;
-  letter-spacing: 5px;
-}
-
-p {
-  color: #cccccc;
-  font-size: 16px;
-}
-
-.paragraph {
-  background-color: #0d0d0d;
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-}
-
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */

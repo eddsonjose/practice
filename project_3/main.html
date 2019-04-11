@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+  <title>Landscape</title>
+</head>
+
+<body>
+  <a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+
+    <!-- BACKGROUND IMAGE SOURCE -->
+    <a-assets><img id="skyTexture" src="images/Landscape_4.png"></a-assets>
+    <a-sky id="background" src="#skyTexture" theta-length="90" radius="60" material="" geometry="radius: 90"></a-sky>
+
+    <!-- GROUND -->
+    <!-- <a-plane src="images/ground3.jpg" repeat="50 50" scale="" height="150" width="150" rotation="-90 0" material="color: #1d2824" roughness="1" shadow="" position="" geometry="height: 180; width: 180"></a-plane> -->
+
+    <!-- OCEAN -->
+    <a-ocean width="200" depth="200" density="40" speed="0.1" position="93 0 0" rotation="-90" color="#2e4466" scale visible ocean></a-ocean>
+
+    <!-- LIGHTS -->
+    <a-light type="point" intensity="0.9" position="80 20 5" light=""></a-light>
+    <!-- <a-entity light="type: ambient; color: #fff69b" position rotation scale visible></a-entity> -->
+    <a-entity light="castShadow: true; intensity: 0.7; shadowCameraTop: 50; shadowCameraRight: 50; shadowCameraBottom: -50; shadowCameraLeft: -50" position="1 60 31"></a-entity>
+
+    <!-- CAMERA -->
+    <a-camera camera="fov: 70" position="-14 2.0 -6" rotation="0 -135" look-controls="" wasd-controls="acceleration: 100" data-aframe-inspector-original-camera="" universal-controls="fly: true">
+
+      <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>
