@@ -10,45 +10,38 @@
 </head>
 
 <body>
-  <a-scene stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+  <a-scene fog="color: #afd8ff; far: 350; near: 0; density: 0" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+
     <a-assets>
       <img id="skyTexture" src="images/sky.jpg">
-      <a-asset-item id="tree-obj" src="/objects/tree.obj"></a-asset-item>
-      <a-asset-item id="tree-mtl" src="/objects/tree.mtl"></a-asset-item>
-      <a-asset-item id="ground-obj" src="/objects/ground.obj"></a-asset-item>
-      <a-asset-item id="ground-mtl" src="/objects/ground.mtl"></a-asset-item>
+      <a-asset-item id="bottle-obj" src="bottle.obj"></a-asset-item>
+      <a-asset-item id="bottle-mtl" src="bottle.mtl"></a-asset-item>
+      <a-asset-item id="ground-obj" src="ground.obj"></a-asset-item>
+      <a-asset-item id="ground-mtl" src="ground.mtl"></a-asset-item>
     </a-assets>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
       <!-- SKY -->
-      <a-sky id="background" src="#skyTexture" theta-length="180" radius="120" material="" geometry="radius: 90" scale="-2 2 2"></a-sky>
+      <a-sky background="color: #afd8ff"></a-sky>
+      <!-- <a-sky id="background" src="#skyTexture" theta-length="180" radius="120" material="" geometry="radius: 90" scale="-2 2 2"></a-sky> -->
+      <!-- LIGHTS -->
+      <a-light intensity="0.9" position="154.48417 66.72212 5" light="intensity: 2.3; color: #ffea93; type: point; castShadow: true" rotation="0 90"></a-light>
+      <!-- <a-entity light="type: ambient; color: #222" intensity="0.5" position="" rotation="" scale="" visible=""></a-entity> -->
+      <a-entity light="type: ambient; color: #222; intensity: 3" intensity="0.5" position="" rotation="" scale="" visible=""></a-entity>
       <!-- GROUND -->
-      <!-- <a-plane src="" repeat="50 50" scale="" height="150" width="150" rotation="-90 0" material="color: #e8e7d0" roughness="1" shadow="false" position="" geometry="height: 180; width: 180"></a-plane> -->
-      <a-entity obj-model="obj: #ground-obj; mtl: #ground-mtl"></a-entity>
-
-      <!-- SAND -->
-      <a-box position="-37 0.777 -2.157" material="color: #e8e7d0; roughness: 1" geometry="primitive: dodecahedron; radius: 0" shadow="true" scale="90 0.880 400" rotation="-0.070 0 -0.04"></a-box>
-      <!-- GRASS -->
-      <a-box position="-90 1.2 -2.157" material="color: #99b78f; roughness: 1" geometry="primitive: dodecahedron; radius: 0" shadow="true" scale="120 0.880 400" rotation="-0.070 0 -0.04"></a-box>
-      <!-- TREE -->
-      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+      <a-entity id="ground" obj-model="obj: ground.obj; mtl: ground.mtl" position="0 0.5 0" rotation="0 90" scale="1 1 1"></a-entity>
+      <!-- BOTTLE -->
+      <a-entity id="bottle" link="href: plastic_pollution.html; title: Plastic Pollution" obj-model="obj: bottle.obj; mtl: bottle.mtl" position="0 0.338 20.067" rotation="0 0 79.8" scale=""></a-entity>
+      <!-- OCEAN -->
+      <a-ocean width="200" depth="200" density="5" speed="0.001" position="0 -0.1 0" rotation="-90" color="#2e4466" scale visible ocean></a-ocean>
     </a-entity>
 
-    <!-- ------------------------------------------------------------------- -->
-    <!-- OCEAN -->
-    <a-ocean width="400" depth="400" density="40" speed="0.1" position="206 1.066 0" rotation="-90" color="#2e4466" scale visible ocean></a-ocean>
-    <!-- ------------------------------------------------------------------- -->
-    <!-- LIGHTS -->
-    <a-entity light="type: ambient; color: #222" intensity="0.5" position="" rotation="" scale="" visible=""></a-entity>
-    <a-light type="point" intensity="0.9" position="80 20 5" light=""></a-light>
-    <!-- <a-entity light="type: ambient; color: #fff69b" position rotation scale visible></a-entity> -->
-    <a-entity light="castShadow: true; intensity: 0.7; shadowCameraTop: 50; shadowCameraRight: 50; shadowCameraBottom: -50; shadowCameraLeft: -50" position="1 60 31"></a-entity>
-    <!-- ------------------------------------------------------------------- -->
-    <!-- CAMERA -->
-    <a-camera camera="fov: 70" position="-14 2.0 -6" rotation="0 -135" look-controls="" wasd-controls="acceleration: 100" data-aframe-inspector-original-camera="" universal-controls="fly: true">
 
+    <!-- CAMERA -->
+    <a-camera camera="fov: 70; active: true" position="-15 2 6.3" rotation="1.8 -85 0" look-controls="true" wasd-controls="acceleration: 100" data-aframe-inspector-original-camera="" universal-controls="fly: true">
       <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor>
     </a-camera>
+
   </a-scene>
 </body>
 
