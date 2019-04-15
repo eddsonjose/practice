@@ -10,34 +10,38 @@
 </head>
 
 <body>
-  <a-scene fog="color: #afd8ff; far: 350; near: 0; density: 0" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+  <a-scene fog="color: #93acc4; far: 150; near: 0; density: 5" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
 
     <a-assets>
-      <img id="skyTexture" src="images/sun_sunset.jpg">
+      <img id="skyTexture" src="images/sunset.jpg">
       <a-asset-item id="bottle-obj" src="bottle.obj"></a-asset-item>
       <a-asset-item id="bottle-mtl" src="bottle.mtl"></a-asset-item>
       <a-asset-item id="boat-obj" src="boat.obj"></a-asset-item>
       <a-asset-item id="boat-mtl" src="boat.mtl"></a-asset-item>
-      <a-asset-item id="pacific_gyre_trash-obj" src="pacific_gyre_trash.obj"></a-asset-item>
-      <a-asset-item id="pacific_gyre_trash-mtl" src="pacific_gyre_trash.mtl"></a-asset-item>
+      <a-asset-item id="mainland_trash-obj" src="mainland_trash.obj"></a-asset-item>
+      <a-asset-item id="mainland_trash-mtl" src="mainland_trash.mtl"></a-asset-item>
     </a-assets>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
       <!-- SKY -->
-      <!-- <a-sky background="color: #afd8ff"></a-sky> -->
+      <!-- <a-sky background="color: #93acc4"></a-sky> -->
       <a-sky id="background"
                 src="#skyTexture"
                 theta-length="180"
                 radius="120"
                 material=""
                 geometry="radius: 90"
-                rotation="0 90 0"
-                scale="-2 2 2"></a-sky>
-      <!-- LIGHTS -->
-      <a-light intensity="1"
-                position="0.25 40 50"
                 rotation="0 90"
-                light=""></a-light>
+                scale="-4 4 4"></a-sky>
+      <!-- LIGHTS -->
+      <!-- <a-light intensity="0.9"
+                position="26.0796 8 115.56844"
+                light="intensity: 2; color: #ff9721; type: point"
+                rotation="0 90"></a-light> -->
+      <a-light intensity="0.5"
+                position="-3.26736 17.08337 115.56844"
+                light="intensity: 1; color: #ce9f69"
+                rotation="0 90"></a-light>
       <!-- <a-entity light="type: ambient; color: #222"
                 intensity="0.5"
                 position=""
@@ -50,44 +54,41 @@
                 rotation=""
                 scale=""
                 visible=""></a-entity>
-      <!-- GYRE -->
-      <a-entity id="gyre"
-                obj-model="obj: pacific_gyre_trash.obj; mtl: pacific_gyre_trash.mtl"
-                position="0 -0.1 0"
-                rotation="0 90"
+      <!-- GROUND -->
+      <a-entity id="ground"
+                obj-model="obj: mainland_trash.obj; mtl: mainland_trash.mtl"
+                position="0 -1.2 0"
+                rotation=""
                 scale="1 1 1"></a-entity>
       <!-- BOTTLE -->
       <a-entity id="bottle"
-                link="href: pacific_gyre_no_trash_2.html"
+                link="href: mainland_no_trash.html"
                 obj-model="obj: bottle.obj; mtl: bottle.mtl"
-                position="-4 -0.15 -6"
-                rotation="0 0 79.8"
-                scale=""></a-entity>
+                position="51 0.1 9"
+                rotation="0 0 79.8"></a-entity>
       <!-- BOAT -->
       <a-entity id="boat"
-                link="href: mainland_trash_extra.html"
                 obj-model="obj: boat.obj; mtl: boat.mtl"
-                position="0 0.5 0"
-                rotation=""
+                position="28 0.5 27"
+                rotation="0 -90"
                 scale=""></a-entity>
       <!-- OCEAN -->
       <a-ocean width="200"
                 depth="200"
                 density="50"
-                speed="0.001"
+                speed="0.0001"
                 position="0 -0.1 0"
                 rotation="-90"
-                color="#2e4466"
+                color="#3a424f"
                 scale visible ocean></a-ocean>
     </a-entity>
 
-
     <!-- CAMERA -->
-    <a-camera camera="fov: 70; active: true"
-              position=""
+    <a-camera camera="fov: 60; active: true"
+              position="28 2 23"
               rotation=""
               look-controls="pointerLockEnabled: true"
-              wasd-controls="acceleration: 100"
+              wasd-controls="acceleration: 70"
               data-aframe-inspector-original-camera="">
       <a-cursor cursor="fuse: true"></a-cursor>
     </a-camera>

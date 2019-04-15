@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-geometry-merger-component/dist/aframe-geometry-merger-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+  <title>Your Choice</title>
+</head>
+
+<body>
+  <a-scene fog="color: #afd8ff; far: 150; near: 0; density: 0" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+
+    <a-assets>
+      <img id="skyTexture" src="images/sun_sunset.jpg">
+      <a-asset-item id="bottle-obj" src="bottle.obj"></a-asset-item>
+      <a-asset-item id="bottle-mtl" src="bottle.mtl"></a-asset-item>
+      <a-asset-item id="boat-obj" src="boat.obj"></a-asset-item>
+      <a-asset-item id="boat-mtl" src="boat.mtl"></a-asset-item>
+      <a-asset-item id="pacific_gyre_trash-obj" src="pacific_gyre_trash.obj"></a-asset-item>
+      <a-asset-item id="pacific_gyre_trash-mtl" src="pacific_gyre_trash.mtl"></a-asset-item>
+    </a-assets>
+
+    <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+      <!-- SKY -->
+      <!-- <a-sky background="color: #afd8ff"></a-sky> -->
+      <a-sky id="background"
+                src="#skyTexture"
+                theta-length="180"
+                radius="120"
+                material=""
+                geometry="radius: 90"
+                rotation="0 90 0"
+                scale="-2 2 2"></a-sky>
+      <!-- LIGHTS -->
+      <a-light intensity="1"
+                position="0.25 40 50"
+                rotation="0 90"
+                light=""></a-light>
+      <!-- <a-entity light="type: ambient; color: #222"
+                intensity="0.5"
+                position=""
+                rotation=""
+                scale=""
+                visible=""></a-entity> -->
+      <a-entity light="type: ambient; color: #222; intensity: 3"
+                intensity="0.5"
+                position=""
+                rotation=""
+                scale=""
+                visible=""></a-entity>
+      <!-- GYRE -->
+      <a-entity id="gyre"
+                obj-model="obj: pacific_gyre_trash.obj; mtl: pacific_gyre_trash.mtl"
+                position="0 -0.1 0"
+                rotation="0 90"
+                scale="1 1 1"></a-entity>
+      <!-- BOTTLE -->
+      <a-entity id="bottle"
+                link="href: 2_ocean_good.html"
+                obj-model="obj: bottle.obj; mtl: bottle.mtl"
+                position="-4 -0.15 -6"
+                rotation="0 0 79.8"
+                scale=""></a-entity>
+      <!-- BOAT -->
+      <a-entity id="boat"
+                link="href: 2_home_slightly_bad.html"
+                obj-model="obj: boat.obj; mtl: boat.mtl"
+                position="0 0.5 0"
+                rotation=""
+                scale=""></a-entity>
+      <!-- OCEAN -->
+      <a-ocean width="200"
+                depth="200"
+                density="50"
+                speed="0.001"
+                position="0 -0.1 0"
+                rotation="-90"
+                color="#2e4466"
+                scale visible ocean></a-ocean>
+    </a-entity>
+
+
+    <!-- CAMERA -->
+    <a-camera camera="fov: 70; active: true"
+              position="0 2 0"
+              rotation=""
+              look-controls="pointerLockEnabled: true"
+              wasd-controls="acceleration: 100"
+              data-aframe-inspector-original-camera="">
+      <a-cursor cursor=""></a-cursor>
+    </a-camera>
+
+  </a-scene>
+</body>
+
+</html>

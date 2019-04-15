@@ -10,34 +10,34 @@
 </head>
 
 <body>
-  <a-scene fog="color: #ff9721; far: 700; near: 0; density: 0" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+  <a-scene fog="color: #afd8ff; far: 150; near: 0; density: 0" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
 
     <a-assets>
-      <img id="skyTexture" src="images/sunset.jpg">
+      <img id="skyTexture" src="images/sun_sunset.jpg">
       <a-asset-item id="bottle-obj" src="bottle.obj"></a-asset-item>
       <a-asset-item id="bottle-mtl" src="bottle.mtl"></a-asset-item>
       <a-asset-item id="boat-obj" src="boat.obj"></a-asset-item>
       <a-asset-item id="boat-mtl" src="boat.mtl"></a-asset-item>
-      <a-asset-item id="mainland_no_trash-obj" src="mainland_no_trash.obj"></a-asset-item>
-      <a-asset-item id="mainland_no_trash-mtl" src="mainland_no_trash.mtl"></a-asset-item>
+      <a-asset-item id="pacific_gyre_no_trash-obj" src="pacific_gyre_no_trash.obj"></a-asset-item>
+      <a-asset-item id="pacific_gyre_no_trash-mtl" src="pacific_gyre_no_trash.mtl"></a-asset-item>
     </a-assets>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
       <!-- SKY -->
-      <!-- <a-sky background="color: #ff9721"></a-sky> -->
+      <!-- <a-sky background="color: #afd8ff"></a-sky> -->
       <a-sky id="background"
                 src="#skyTexture"
                 theta-length="180"
                 radius="120"
                 material=""
-                rotation="0 90"
                 geometry="radius: 90"
-                scale="-4 4 4"></a-sky>
+                rotation="0 90 0"
+                scale="-2 2 2"></a-sky>
       <!-- LIGHTS -->
-      <a-light intensity="0.9"
-                position="0.25 10 31"
-                light="intensity: 2; color: #ff9721; type: point; castShadow: false"
-                rotation="0 90"></a-light>
+      <a-light intensity="1"
+                position="0.25 40 50"
+                rotation="0 90"
+                light=""></a-light>
       <!-- <a-entity light="type: ambient; color: #222"
                 intensity="0.5"
                 position=""
@@ -50,22 +50,26 @@
                 rotation=""
                 scale=""
                 visible=""></a-entity>
-      <!-- GROUND -->
-      <a-entity id="ground"
-                obj-model="obj: mainland_no_trash.obj; mtl: mainland_no_trash.mtl"
-                position="0 -1.2 0"
-                rotation=""
+      <!-- GYRE -->
+      <a-entity id="gyre"
+                obj-model="obj: pacific_gyre_no_trash.obj; mtl: pacific_gyre_no_trash.mtl"
+                position="0 -0.1 0"
+                rotation="0 90"
                 scale="1 1 1"></a-entity>
       <!-- BOTTLE -->
       <!-- <a-entity id="bottle"
+                link="href: pacific_gyre_no_trash.html"
                 obj-model="obj: bottle.obj; mtl: bottle.mtl"
-                position="0 0.338 20.067"
-                rotation="0 0 79.8"></a-entity> -->
+                position="4.5 -0.2 10"
+                rotation="0 0 79.8"
+                scale=""></a-entity> -->
       <!-- BOAT -->
       <a-entity id="boat"
+                link="href: 2_home_best.html"
                 obj-model="obj: boat.obj; mtl: boat.mtl"
-                position="28 0.5 27"
-                rotation="0 -90"></a-entity>
+                position="0 0.5 0"
+                rotation=""
+                scale=""></a-entity>
       <!-- OCEAN -->
       <a-ocean width="200"
                 depth="200"
@@ -77,14 +81,15 @@
                 scale visible ocean></a-ocean>
     </a-entity>
 
+
     <!-- CAMERA -->
     <a-camera camera="fov: 70; active: true"
-              position="28 2 23"
+              position="0 2 0"
               rotation=""
               look-controls="pointerLockEnabled: true"
               wasd-controls="acceleration: 100"
               data-aframe-inspector-original-camera="">
-      <a-cursor cursor="fuse: true"></a-cursor>
+      <a-cursor cursor=""></a-cursor>
     </a-camera>
 
   </a-scene>
