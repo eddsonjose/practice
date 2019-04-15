@@ -6,40 +6,91 @@
   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-geometry-merger-component/dist/aframe-geometry-merger-component.min.js"></script>
   <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
-  <title>Landscape</title>
+  <title>Your Choice</title>
 </head>
 
 <body>
   <a-scene fog="color: #afd8ff; far: 350; near: 0; density: 0" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
 
     <a-assets>
-      <img id="skyTexture" src="images/sky.jpg">
+      <img id="skyTexture" src="images/sun_noon.jpg">
       <a-asset-item id="bottle-obj" src="bottle.obj"></a-asset-item>
       <a-asset-item id="bottle-mtl" src="bottle.mtl"></a-asset-item>
-      <a-asset-item id="ground-obj" src="ground.obj"></a-asset-item>
-      <a-asset-item id="ground-mtl" src="ground.mtl"></a-asset-item>
+      <a-asset-item id="boat-obj" src="boat.obj"></a-asset-item>
+      <a-asset-item id="boat-mtl" src="boat.mtl"></a-asset-item>
+      <a-asset-item id="island_trash-obj" src="island_trash.obj"></a-asset-item>
+      <a-asset-item id="island_trash-mtl" src="island_trash.mtl"></a-asset-item>
     </a-assets>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
       <!-- SKY -->
-      <a-sky background="color: #afd8ff"></a-sky>
-      <!-- <a-sky id="background" src="#skyTexture" theta-length="180" radius="120" material="" geometry="radius: 90" scale="-2 2 2"></a-sky> -->
+      <!-- <a-sky background="color: #afd8ff"></a-sky> -->
+      <a-sky id="background"
+                src="#skyTexture"
+                theta-length="180"
+                radius="120"
+                material=""
+                geometry="radius: 90"
+                rotation="0 90 0"
+                scale="-1 1 1"></a-sky>
       <!-- LIGHTS -->
-      <a-light intensity="0.9" position="154.48417 66.72212 5" light="intensity: 2.3; color: #ffea93; type: point; castShadow: true" rotation="0 90"></a-light>
-      <!-- <a-entity light="type: ambient; color: #222" intensity="0.5" position="" rotation="" scale="" visible=""></a-entity> -->
-      <a-entity light="type: ambient; color: #222; intensity: 3" intensity="0.5" position="" rotation="" scale="" visible=""></a-entity>
+      <a-light intensity="1"
+                position="0.25 78 31"
+                rotation="0 90"></a-light>
+      <!-- <a-entity light="type: ambient; color: #222"
+                intensity="0.5"
+                position=""
+                rotation=""
+                scale=""
+                visible=""></a-entity> -->
+      <a-entity light="type: ambient; color: #222; intensity: 3"
+                intensity="0.5"
+                position=""
+                rotation=""
+                scale=""
+                visible=""></a-entity>
       <!-- GROUND -->
-      <a-entity id="ground" obj-model="obj: ground.obj; mtl: ground.mtl" position="0 0.5 0" rotation="0 90" scale="1 1 1"></a-entity>
+      <a-entity id="ground"
+                obj-model="obj: island_trash.obj; mtl: island_trash.mtl"
+                position="0 0.5 0"
+                rotation="0 90"
+                scale="1 1 1"></a-entity>
       <!-- BOTTLE -->
-      <a-entity id="bottle" link="href: plastic_pollution.html; title: Plastic Pollution" obj-model="obj: bottle.obj; mtl: bottle.mtl" position="0 0.338 20.067" rotation="0 0 79.8" scale=""></a-entity>
+      <a-entity id="bottle"
+                link="href: island_no_trash.html"
+                obj-model="obj: bottle.obj; mtl: bottle.mtl"
+                position="0 0.338 20.067"
+                rotation="0 0 79.8"></a-entity>
+      <!-- BOAT -->
+      <a-entity id="boat"
+                link="href: pacific_gyre_trash_extra.html"
+                obj-model="obj: boat.obj; mtl: boat.mtl"
+                position="-24 0.5 -9"
+                rotation=""
+                scale=""></a-entity>
       <!-- OCEAN -->
-      <a-ocean width="200" depth="200" density="5" speed="0.001" position="0 -0.1 0" rotation="-90" color="#2e4466" scale visible ocean></a-ocean>
+      <a-ocean width="200"
+                depth="200"
+                density="50"
+                speed="0.001"
+                position="0 -0.1 0"
+                rotation="-90"
+                color="#2e4466"
+                scale visible ocean></a-ocean>
     </a-entity>
 
-
     <!-- CAMERA -->
-    <a-camera camera="fov: 70; active: true" position="-15 2 6.3" rotation="1.8 -85 0" look-controls="true" wasd-controls="acceleration: 100" data-aframe-inspector-original-camera="" universal-controls="fly: true">
-      <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor>
+    <a-camera camera="fov: 70; active: true"
+              position="-10 2 7"
+              rotation=""
+              look-controls="true"
+              wasd-controls="acceleration: 100"
+              data-aframe-inspector-original-camera=""
+              universal-controls="fly: true">
+      <a-cursor material=""
+              raycaster=""
+              cursor=""
+              geometry=""></a-cursor>
     </a-camera>
 
   </a-scene>
