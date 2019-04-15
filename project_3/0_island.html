@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <a-scene fog="color: #afd8ff; far: 350; near: 0; density: 0" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+  <a-scene fog="color: #afd8ff; far: 350; near: 0; density: 0" physics="true" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
 
     <a-assets>
       <img id="skyTexture" src="images/sun_noon.jpg">
@@ -20,17 +20,15 @@
       <a-asset-item id="boat-mtl" src="boat.mtl"></a-asset-item>
       <a-asset-item id="island_trash-obj" src="island_trash.obj"></a-asset-item>
       <a-asset-item id="island_trash-mtl" src="island_trash.mtl"></a-asset-item>
-      <a-mixin id="text"
-          text="align: center; width: 6;
-               value: Clean up this mess by clicking on the bottle with the green cap or leave by clicking the boat."></a-mixin>
-      <a-mixin id="controls"
-          text="align: center; width: 6;
-              value: Controls: WASD and mouse."></a-mixin>
+      <a-mixin id="title" text="align: center; width: 6; value: YOUR CHOICE"></a-mixin>
+      <a-mixin id="text" text="align: center; width: 6; value: Clean up the trash by clicking on the bottle with the green cap or leave by clicking the boat."></a-mixin>
+      <a-mixin id="controls" text="align: center; width: 6; value: Controls: WASD and mouse."></a-mixin>
     </a-assets>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
       <!-- TEXT -->
-      <a-text mixin="text" position="-10 3 0" wrap-count="20"></a-text>
+      <a-text mixin="title" position="-10 4 0" wrap-count="20"></a-text>
+      <a-text mixin="text" position="-10 2.5 0" wrap-count="30"></a-text>
       <a-text mixin="controls" position="-10 1 0" wrap-count="30"></a-text>
       <!-- SKY -->
       <!-- <a-sky background="color: #afd8ff"></a-sky> -->

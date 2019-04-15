@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <a-scene fog="color: #93acc4; far: 700; near: 0; density: 0" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+  <a-scene fog="color: #93acc4; far: 350; near: 0; density: 0" physics="true" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
 
     <a-assets>
       <img id="skyTexture" src="images/sunset.jpg">
@@ -20,9 +20,12 @@
       <a-asset-item id="boat-mtl" src="boat.mtl"></a-asset-item>
       <a-asset-item id="mainland_trash-obj" src="mainland_trash.obj"></a-asset-item>
       <a-asset-item id="mainland_trash-mtl" src="mainland_trash.mtl"></a-asset-item>
+      <a-mixin id="text" text="align: center; width: 6; value: End"></a-mixin>
     </a-assets>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+      <!-- TEXT -->
+      <a-text mixin="text" position="23 0.42 20" wrap-count="5"></a-text>
       <!-- SKY -->
       <!-- <a-sky background="color: #93acc4"></a-sky> -->
       <a-sky id="background"
@@ -40,7 +43,7 @@
                 rotation="0 90"></a-light> -->
       <a-light intensity="0.9"
                 position="-3.26736 17.08337 115.56844"
-                light="intensity: 2; color: #ff9721"
+                light="intensity: 1; color: #ffb056"
                 rotation="0 90"></a-light>
       <!-- <a-entity light="type: ambient; color: #222"
                 intensity="0.5"
@@ -61,11 +64,11 @@
                 rotation=""
                 scale="1 1 1"></a-entity>
       <!-- BOTTLE -->
-      <a-entity id="bottle"
+      <!-- <a-entity id="bottle"
                 link="href: mainland_no_trash.html; title: asdffd"
                 obj-model="obj: bottle.obj; mtl: bottle.mtl"
                 position="51 0.1 9"
-                rotation="0 0 79.8"></a-entity>
+                rotation="0 0 79.8"></a-entity> -->
       <!-- BOAT -->
       <a-entity id="boat"
                 obj-model="obj: boat.obj; mtl: boat.mtl"
@@ -84,7 +87,7 @@
     </a-entity>
 
     <!-- CAMERA -->
-    <a-camera camera="fov: 70; active: true"
+    <a-camera camera="fov: 65; active: true"
               position="28 2 23"
               rotation=""
               look-controls="pointerLockEnabled: true"

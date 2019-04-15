@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <a-scene fog="color: #5a6875; far: 125; near: 0; density: 5" physics="true" stats inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+  <a-scene fog="color: #5a6875; far: 50; near: 0; density: 5" physics="true" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
 
     <a-assets>
       <img id="skyTexture" src="images/sunset.jpg">
@@ -20,9 +20,12 @@
       <a-asset-item id="boat-mtl" src="boat.mtl"></a-asset-item>
       <a-asset-item id="mainland_trash_extra-obj" src="mainland_trash_extra.obj"></a-asset-item>
       <a-asset-item id="mainland_trash_extra-mtl" src="mainland_trash_extra.mtl"></a-asset-item>
+      <a-mixin id="text" text="align: center; width: 6; value: End"></a-mixin>
     </a-assets>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+      <!-- TEXT -->
+      <a-text mixin="text" position="23 0.42 20" wrap-count="5"></a-text>
       <!-- SKY -->
       <!-- <a-sky background="color: #93acc4"></a-sky> -->
       <a-sky id="background"
