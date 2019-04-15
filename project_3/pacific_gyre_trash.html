@@ -24,14 +24,15 @@
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
       <!-- SKY -->
-      <a-sky background="color: #afd8ff"></a-sky>
-      <!-- <a-sky id="background"
+      <!-- <a-sky background="color: #afd8ff"></a-sky> -->
+      <a-sky id="background"
                 src="#skyTexture"
                 theta-length="180"
                 radius="120"
                 material=""
                 geometry="radius: 90"
-                scale="-2 2 2"></a-sky> -->
+                rotation="0 90 0"
+                scale="-2 2 2"></a-sky>
       <!-- LIGHTS -->
       <a-light intensity="1"
                 position="0.25 40 50"
@@ -72,7 +73,7 @@
       <!-- OCEAN -->
       <a-ocean width="200"
                 depth="200"
-                density="10"
+                density="50"
                 speed="0.001"
                 position="0 -0.1 0"
                 rotation="-90"
@@ -83,16 +84,12 @@
 
     <!-- CAMERA -->
     <a-camera camera="fov: 70; active: true"
-              position="0 2 0"
-              rotation="0 0 0"
-              look-controls="true"
-              wasd-controls="acceleration: 0"
-              data-aframe-inspector-original-camera=""
-              universal-controls="fly: true">
-      <a-cursor material=""
-              raycaster=""
-              cursor=""
-              geometry=""></a-cursor>
+              position="-10 2 7"
+              rotation=""
+              look-controls="pointerLockEnabled: true"
+              wasd-controls="acceleration: 100"
+              data-aframe-inspector-original-camera="">
+      <a-cursor cursor="fuse: true"></a-cursor>
     </a-camera>
 
   </a-scene>

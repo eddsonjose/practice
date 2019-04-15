@@ -75,14 +75,10 @@
     <a-camera camera="fov: 70; active: true"
               position="-10 2 7"
               rotation=""
-              look-controls="true"
+              look-controls="pointerLockEnabled: true"
               wasd-controls="acceleration: 100"
-              data-aframe-inspector-original-camera=""
-              universal-controls="fly: true">
-      <a-cursor material=""
-              raycaster=""
-              cursor=""
-              geometry=""></a-cursor>
+              data-aframe-inspector-original-camera="">
+      <a-cursor cursor="fuse: true"></a-cursor>
     </a-camera>
 
   </a-scene>

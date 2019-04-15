@@ -20,9 +20,18 @@
       <a-asset-item id="boat-mtl" src="boat.mtl"></a-asset-item>
       <a-asset-item id="island_trash-obj" src="island_trash.obj"></a-asset-item>
       <a-asset-item id="island_trash-mtl" src="island_trash.mtl"></a-asset-item>
+      <a-mixin id="text"
+          text="align: center; width: 6;
+               value: Clean up this mess by clicking on the bottle with the green cap or leave by clicking the boat."></a-mixin>
+      <a-mixin id="controls"
+          text="align: center; width: 6;
+              value: Controls: WASD and mouse."></a-mixin>
     </a-assets>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+      <!-- TEXT -->
+      <a-text mixin="text" position="-10 3 0" wrap-count="20"></a-text>
+      <a-text mixin="controls" position="-10 1 0" wrap-count="30"></a-text>
       <!-- SKY -->
       <!-- <a-sky background="color: #afd8ff"></a-sky> -->
       <a-sky id="background"
@@ -83,15 +92,20 @@
     <a-camera camera="fov: 70; active: true"
               position="-10 2 7"
               rotation=""
-              look-controls="true"
+              look-controls="pointerLockEnabled: true"
               wasd-controls="acceleration: 100"
-              data-aframe-inspector-original-camera=""
-              universal-controls="fly: true">
-      <a-cursor material=""
-              raycaster=""
-              cursor=""
-              geometry=""></a-cursor>
+              data-aframe-inspector-original-camera="">
+      <a-cursor cursor="fuse: true"></a-cursor>
     </a-camera>
+
+
+<!--
+<a-cursor material=""
+        raycaster=""
+        cursor=""
+        line="start: 0, 0, 0; end: 2 0 -5; color: red"
+        rayOrigin="entity"
+        geometry=""></a-cursor> -->
 
   </a-scene>
 </body>
