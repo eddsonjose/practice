@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Real Estate Shopping</title>
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-geometry-merger-component/dist/aframe-geometry-merger-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+
+</head>
+
+<body>
+  <a-scene fog="color: #11121F; density: 0; far: 250">
+
+    <a-asset>
+      <img id="sky" src="images/sky.png">
+      <a-asset-item id="ground_obj" src="objects/ground.obj"></a-asset-item>
+      <a-asset-item id="ground_mtl" src="objects/ground.mtl"></a-asset-item>
+      <a-asset-item id="water" src="audio/water.mp3"></a-asset-item>
+    </a-asset>
+
+    <!-- SKY -->
+    <a-sky src="#sky" scale="-1 1 1"></a-sky>
+    <!-- LIGHT -->
+    <a-light intensity="1" position="0 5 -156" rotation="0 90"></a-light>
+    <!-- GROUND -->
+    <a-obj-model src="#ground_obj" mtl="#ground_mtl"></a-obj-model>
+    <!-- OCEAN -->
+    <a-ocean width="100" depth="100" density="5" speed="0.01" position="0 -0.5 -15" rotation="-90" color="#2e4466" scale visible ocean></a-ocean>
+    <!-- GRASS -->
+    <a-entity mythreejsthing="color: green;" position="0 1 -5"> </a-entity>
+    <!-- SOUNDS -->
+    <a-sound src="src: audio/water.mp3" volume="1" autoplay="true" loop="true"></a-sound>
+
+
+  </a-scene>
+
+</body>
+
+</html>
