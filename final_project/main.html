@@ -7,6 +7,8 @@
   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-geometry-merger-component/dist/aframe-geometry-merger-component.min.js"></script>
   <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+  <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
 
 </head>
 
@@ -17,6 +19,8 @@
       <img id="sky" src="images/sky.png">
       <a-asset-item id="ground_obj" src="objects/ground.obj"></a-asset-item>
       <a-asset-item id="ground_mtl" src="objects/ground.mtl"></a-asset-item>
+      <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
+      <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
       <audio id="water" src="audio/water.mp3" preload="auto"></audio>
     </a-asset>
 
@@ -29,11 +33,38 @@
     <!-- OCEAN -->
     <a-ocean width="100" depth="100" density="5" speed="0.01" position="0 -0.5 -15" rotation="-90" color="#2e4466" scale visible ocean></a-ocean>
     <!-- SOUNDS -->
-    <!-- <a-sound src="#water" volume="1" autoplay="true" loop="true"></a-sound> -->
-    <a-entity sound="src: #water; autoplay: true; loop: true"></a-entity>
+    <a-entity sound="src: #water; autoplay: true; loop: true; volume: 0.2;"></a-entity>
+    <!-- STAR (UNCLICKABLE) -->
+    <a-entity star-system="count: 1000; radius: 150; depth: 200"></a-entity>
+    <!-- STAR (CLICKABLE) -->
+    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="0 10 -20" scale="0.03 0.03 0"obj-model="obj: #star_obj" material="emissive: #ffffff;"
+      animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.2 0.2 0; dur: 500; easing: linear" animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.03 0.03 0; dur: 500; easing: linear">
+    </a-entity>
+    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="14 20 -3" rotation="45 -35" scale="0.03 0.03 0"obj-model="obj: #star_obj" material="emissive: #ffffff;"
+      animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.2 0.2 0; dur: 500; easing: linear" animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.03 0.03 0; dur: 500; easing: linear">
+    </a-entity>
+    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="-21 15 -2" rotation="0 90" scale="0.03 0.03 0"obj-model="obj: #star_obj" material="emissive: #ffffff;"
+      animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.2 0.2 0; dur: 500; easing: linear" animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.03 0.03 0; dur: 500; easing: linear">
+    </a-entity>
+    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="-12 20 -14" rotation="20 35" scale="0.03 0.03 0"obj-model="obj: #star_obj" material="emissive: #ffffff;"
+      animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.2 0.2 0; dur: 500; easing: linear" animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.03 0.03 0; dur: 500; easing: linear">
+    </a-entity>
+    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="11 17 25" rotation="15 200" scale="0.03 0.03 0"obj-model="obj: #star_obj" material="emissive: #ffffff;"
+      animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.2 0.2 0; dur: 500; easing: linear" animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.03 0.03 0; dur: 500; easing: linear">
+    </a-entity>
+    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="1 30 0" rotation="90" scale="0.03 0.03 0"obj-model="obj: #star_obj" material="emissive: #ffffff;"
+      animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.2 0.2 0; dur: 500; easing: linear" animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.03 0.03 0; dur: 500; easing: linear">
+    </a-entity>
+
+    <!-- change fov when fusing into a star -->
+
+    <!-- <a-box position="0 5 -10" animation__mouseenter="startEvents: mouseenter; property: position; to: 10 5 -10; dur: 1500; dir: alternate; easing: linear" animation__mouseleave="startEvents: mouseleave; property: position; to: 0 5 -10; dur: 1500; easing: linear"></a-box> -->
+
+
+
     <!-- CURSOR -->
-    <a-camera>
-      <a-cursor></a-cursor>
+    <a-camera wasd-controls-enabled="false" look-controls="pointerLockEnabled: true">
+      <a-cursor fuse="false"></a-cursor>
     </a-camera>
 
 
