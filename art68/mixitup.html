@@ -13,6 +13,8 @@
   <a-scene>
     <a-asset>
       <img id="sky" src="images/sky.png">
+      <a-asset-item id="glacier-obj" src="glacier.obj"></a-asset-item>
+      <a-asset-item id="glacier-mtl" src="glacier.mtl"></a-asset-item>
     </a-asset>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
@@ -22,6 +24,9 @@
       <a-light intensity="1" position="0 5 -156" rotation="0 90"></a-light>
       <a-light type="spot" intensity="1" position="0 15 -156" rotation="-15 180" light="color: #e14f09; groundColor: #e14f09"></a-light>
       <a-light type="ambient" intensity="0.3" position="0 5 -156" rotation="0 90"></a-light>
+      <a-entity id="glacier" obj-model="obj: #glacier-obj; mtl: #glacier-mtl" position="-17 -5 29" rotation="0" scale="30 10 40"></a-entity>
+      <a-entity id="glacier" obj-model="obj: #glacier-obj; mtl: #glacier-mtl" position="-23 -4 -32" rotation="0" scale="30 10 20"></a-entity>
+      <a-entity id="glacier" obj-model="obj: #glacier-obj; mtl: #glacier-mtl" position="20 -4 -9" rotation="0" scale="15 10 20"></a-entity>
       <!-- OCEAN -->
       <a-ocean width="100" depth="100" density="100" speed="0.01" position="0 -0.5 -15" rotation="-90" color="#3587ba" scale visible ocean></a-ocean>
     </a-entity>
