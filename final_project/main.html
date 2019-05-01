@@ -24,6 +24,10 @@
       <a-mixin id="star" scale="0.03 0.03 0" obj-model="obj: #star_obj" material="emissive: #ffffff;" animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.2 0.2 0; dur: 500; easing: linear"
         animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.03 0.03 0; dur: 500; easing: linear">
       </a-mixin>
+      <a-mixin id="text" scale="10 10 0" animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 50 50 0; dur: 500; easing: linear"
+        animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 10 10 0; dur: 500; easing: linear">
+      </a-mixin>
+
     </a-asset>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
@@ -42,20 +46,20 @@
     </a-entity>
 
     <!-- STAR (CLICKABLE) -->
-    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="0 10 -20" scale="0.03 0.03 0" mixin="star">
-    </a-entity>
-    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="14 20 -3" rotation="45 -35" mixin="star">
-    </a-entity>
+    <a-entity link="href: https://eddsonjose.github.io/final_project/proxima_centauri.html" position="0 10 -20" rotation="15" mixin="star">
+      <a-text value="Proxima Centauri" align="center" color="white" scale="30 30" position="0 15 0" ></a-text></a-entity>
+    <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="14 20 -3" rotation="35 -85" mixin="star">
+      <a-text value="Gliese       11       667 Cc" align="center" color="white" position="" mixin="text"></a-text></a-entity>
     <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="-21 15 -2" rotation="0 90" mixin="star">
-    </a-entity>
+      <a-text value="Kepler-442b" align="center" color="white" position="" mixin="text"></a-text></a-entity>
     <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="-12 20 -14" rotation="20 35" mixin="star">
-    </a-entity>
+      <a-text value="Wolf 1061c" align="center" color="white" position="" mixin="text"></a-text></a-entity>
     <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="11 17 25" rotation="15 200" mixin="star">
-    </a-entity>
+      <a-text value="Kapteyn b" align="center" color="white" position="" mixin="text"></a-text></a-entity>
     <a-entity link="href: https://www.trulia.com/p/ca/san-jose/396-sunpark-pl-san-jose-ca-95136--2084600030" position="0.3 30 -3" rotation="90" mixin="star">
-    </a-entity>
+      <a-text value="Luyten b" align="center" color="white" position="" mixin="text"></a-text></a-entity>
     <a-entity link="href: https://www.trulia.com/p/ca/san-jose/88-n-jackson-ave-312-san-jose-ca-95116--2117188109" position="-10 30 15" rotation="90" mixin="star">
-    </a-entity>
+      <a-text value="TRAPPIST-1d" align="center" color="white" position="" mixin="text"></a-text></a-entity>
 
     <!-- change fov when fusing into a star -->
 
