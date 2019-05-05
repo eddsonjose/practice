@@ -20,6 +20,7 @@
       <a-asset-item id="proxima_centauri_mtl" src="objects/proxima_centauri.mtl"></a-asset-item>
       <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
       <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
+      <audio id="wind" src="audio/canyon_wind.mp3" preload="auto"></audio>
     </a-asset>
 
     <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
@@ -28,13 +29,10 @@
       <!-- LIGHT -->
       <a-light intensity="1" position="0 43 -80" rotation="0 90"></a-light>
       <!-- GROUND -->
-      <a-obj-model src="#proxima_centauri_obj" mtl="#proxima_centauri_mtl" sound="src: url(water.mp3); on: click"></a-obj-model>
+      <a-obj-model src="#proxima_centauri_obj" mtl="#proxima_centauri_mtl"></a-obj-model>
+      <!-- SOUNDS -->
+      <a-entity sound="src: #wind; autoplay: true; loop: true; volume: 0.2;"></a-entity>
     </a-entity>
-
-    <!-- STAR (CLICKABLE) -->
-
-
-    <!-- change fov when fusing into a star -->
 
     <!-- CURSOR -->
     <a-camera wasd-controls-enabled="false" look-controls="pointerLockEnabled: true">

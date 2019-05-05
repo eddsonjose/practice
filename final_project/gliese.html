@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gliese 667Cc</title>
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-geometry-merger-component/dist/aframe-geometry-merger-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+  <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene fog="color: #f5c57a; density: 0; far: 15000">
+
+    <a-asset>
+      <img id="sky" src="images/gliese_sky.png">
+      <a-asset-item id="gliese_obj" src="objects/gliese.obj"></a-asset-item>
+      <a-asset-item id="gliese_mtl" src="objects/gliese.mtl"></a-asset-item>
+      <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
+      <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
+      <audio id="wind" src="audio/canyon_wind.mp3" preload="auto"></audio>
+    </a-asset>
+
+    <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+      <!-- SKY -->
+      <a-sky src="#sky" material="" geometry="" rotation="0 -90"></a-sky>
+      <!-- LIGHT -->
+      <a-light intensity="1" position="0 43 -80" rotation="0 90"></a-light>
+      <a-light type="ambient" intensity="0.2" position="0 43 -80" rotation="0 90"></a-light>
+      <!-- GROUND -->
+      <a-obj-model src="#gliese_obj" mtl="#gliese_mtl" scale="" position=""></a-obj-model>
+      <!-- OCEAN -->
+      <a-ocean width="400" depth="400" density="5" speed="0.01" position="0 -14 0" rotation="-90" color="#2e4466" scale visible ocean></a-ocean>
+      <!-- SOUNDS -->
+      <a-entity sound="src: #wind; autoplay: true; loop: true; volume: 0.2;"></a-entity>
+    </a-entity>
+
+    <!-- CURSOR -->
+    <a-camera wasd-controls-enabled="false" look-controls="pointerLockEnabled: true">
+      <a-cursor fuse="false" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.005" material="color: white; shader: flat"></a-cursor>
+    </a-camera>
+
+
+
+  </a-scene>
+
+</body>
+
+</html>

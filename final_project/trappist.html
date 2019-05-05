@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>TRAPPIST-1d</title>
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-geometry-merger-component/dist/aframe-geometry-merger-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+  <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene fog="color: #9b290c; density: 0; far: 600">
+
+    <a-asset>
+      <img id="sky" src="images/trappist_sky.png">
+      <a-asset-item id="trappist_obj" src="objects/trappist.obj"></a-asset-item>
+      <a-asset-item id="trappist_mtl" src="objects/trappist.mtl"></a-asset-item>
+      <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
+      <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
+      <audio id="wind" src="audio/canyon_wind.mp3" preload="auto"></audio>
+    </a-asset>
+
+    <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+      <!-- SKY -->
+      <a-sky src="#sky" material="" geometry="" radius="500" rotation="0 -90"></a-sky>
+      <!-- LIGHT -->
+      <a-light intensity="0.2" position="0 80 -245" rotation="0 90"></a-light>
+      <a-light type="ambient" intensity="0.3" position="0 43 -80" rotation="0 90"></a-light>
+      <!-- GROUND -->
+      <a-obj-model src="#trappist_obj" mtl="#trappist_mtl" scale="30 30 30" position="0 -2.9 0" rotation=""></a-obj-model>
+      <!-- SOUNDS -->
+      <a-entity sound="src: #wind; autoplay: true; loop: true; volume: 0.2;"></a-entity>
+    </a-entity>
+
+    <!-- CURSOR -->
+    <a-camera wasd-controls-enabled="false" look-controls="pointerLockEnabled: true">
+      <a-cursor fuse="false" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.005" material="color: white; shader: flat"></a-cursor>
+    </a-camera>
+
+
+
+  </a-scene>
+
+</body>
+
+</html>
