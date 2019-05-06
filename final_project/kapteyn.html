@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <a-scene fog="color: #AAA; density: 0; far: 1500 ">
+  <a-scene fog="color: #dddddd; density: 0; far: 800 ">
 
     <a-asset>
       <img id="sky" src="images/kapteyn_sky.png">
@@ -27,25 +27,25 @@
       <!-- SKY -->
       <a-sky src="#sky" material="" geometry="" radius="1100" rotation="0 -90"></a-sky>
       <!-- LIGHT -->
-      <a-light intensity="3" position="0 43 -80" rotation="0 90"></a-light>
-      <a-light type="ambient" intensity="0.9" position="0 43 -80" rotation="0 90"></a-light>
+      <a-light intensity="2" position="0 43 -80" rotation="0 90"></a-light>
+      <a-light type="ambient" intensity="1" position="0 43 -80" rotation="0 90"></a-light>
       <!-- GROUND -->
       <a-obj-model src="#kapteyn_obj" mtl="#kapteyn_mtl" scale="15 15 15" position="0 -74.21 -0.25" rotation="0 0 0"></a-obj-model>
       <!-- OCEAN -->
-      <a-ocean width="500" depth="500" density="20" opacity="0.5"speed="0.01" position="0 10 -15" rotation="-90" color="#AAA" scale visible ocean></a-ocean>
+      <a-ocean width="500" depth="500" density="20" opacity="0.5"speed="0.01" position="0 0.5 -15" rotation="-90" color="#dddddd" scale visible ocean></a-ocean>
       <!-- SOUNDS -->
       <a-entity sound="src: #wind; autoplay: true; loop: true; volume: 0.2;"></a-entity>
       <!-- LINKS -->
-      <a-entity link="href: https://www.trulia.com/p/ca/san-jose/442-roading-dr-san-jose-ca-95123--2084479442" position="15 1.2 -11" line="start: 0; end: 15 10 -11; color: white">
-        <a-text value="$850,000" align="center" color="white" width="25" height="25" position="15 11 -11" rotation="0 -45 0">
+      <a-entity link="href: https://www.trulia.com/p/ca/san-jose/442-roading-dr-san-jose-ca-95123--2084479442" position="15 -0.4 -8" line="start: 0; end: 15 10 -8; color: black">
+        <a-text value="$850,000" align="center" color="black" width="35" height="35" position="15 11 -8" rotation="0 -45 0">
         </a-text>
       </a-entity>
-      <a-entity link="href: https://www.trulia.com/p/ca/san-jose/5277-larchwood-dr-san-jose-ca-95118--2084440474" position="-15 1.4 -11" line="start: 0; end: -15 4 -11; color: white">
-        <a-text value="$999,950" align="center" color="white" width="30" height="30" position="-15 5 -11" rotation="0 45 0">
+      <a-entity link="href: https://www.trulia.com/p/ca/san-jose/5277-larchwood-dr-san-jose-ca-95118--2084440474" position="-15 -0.1 -11" line="start: 0; end: -15 4 -11; color: black">
+        <a-text value="$999,950" align="center" color="black" width="30" height="30" position="-15 5 -11" rotation="0 45 0">
         </a-text>
       </a-entity>
-      <a-entity link="href: https://www.trulia.com/p/ca/san-jose/5592-cedar-garden-ct-san-jose-ca-95123--2084483216" position="15 0.8 22" line="start: 0; end: 15 8 22; color: white">
-        <a-text  value="$849,000" align="center" color="white" width="40" height="40" position="15 9 22" rotation="0 -145 0"></a-text>
+      <a-entity link="href: https://www.trulia.com/p/ca/san-jose/5592-cedar-garden-ct-san-jose-ca-95123--2084483216" position="15 -4 35" line="start: 0; end: 15 8 35; color: black">
+        <a-text  value="$849,000" align="center" color="black" width="55" height="55" position="15 9 35" rotation="0 -145 0"></a-text>
       </a-entity>
     </a-entity>
 
