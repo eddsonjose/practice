@@ -1,13 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
-  align: center;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  color: white;
+  padding-top: 20px;
+}
+
+h2 {
+  color: black;
+  padding-top: 20px;
+}
+
+p {
+  color: white;
 }
 
 img {
-
+  float: left;
+  padding: 30px;
 }
 
+iframe {
+  float: left;
+  padding: 30px;
+}
+
+.orgImage {
+  background-color: white;
+}
+
+.clearfix {
+  overflow: auto;
+}
+/*
 .imageContainer > img:hover {
   width: 700px;
   height: 700px;
-}
+} */
