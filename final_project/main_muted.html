@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Real Estate Shopping</title>
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-geometry-merger-component/dist/aframe-geometry-merger-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+  <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene fog="color: #11121F; density: 0; far: 250">
+
+    <a-asset>
+      <img id="sky" src="images/sky.png">
+      <a-asset-item id="ground_obj" src="objects/ground.obj"></a-asset-item>
+      <a-asset-item id="ground_mtl" src="objects/ground.mtl"></a-asset-item>
+      <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
+      <a-asset-item id="star_obj" src="objects/star.obj"></a-asset-item>
+      <!-- <audio id="water" src="audio/water.mp3" preload="auto"></audio> -->
+      <a-mixin id="star" scale="0.03 0.03 0" obj-model="obj: #star_obj" material="emissive: #ffffff;" animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.2 0.2 0; dur: 500; easing: linear"
+        animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 0.03 0.03 0; dur: 500; easing: linear">
+      </a-mixin>
+      <a-mixin id="text" scale="10 10 0" animation__mouseenter="startEvents: mouseenter; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 50 50 0; dur: 500; easing: linear"
+        animation__mouseleave="startEvents: mouseleave; fill: forwards; repeat: 1; dir: alternate; property: scale; to: 10 10 0; dur: 500; easing: linear">
+      </a-mixin>
+
+    </a-asset>
+
+    <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+      <!-- SKY -->
+      <a-sky src="#sky" scale="-1 1 1"></a-sky>
+      <!-- LIGHT -->
+      <a-light intensity="1" position="0 5 -156" rotation="0 90"></a-light>
+      <!-- GROUND -->
+      <a-obj-model src="#ground_obj" mtl="#ground_mtl"></a-obj-model>
+      <!-- OCEAN -->
+      <a-ocean width="100" depth="100" density="5" speed="0.01" position="0 -0.5 -15" rotation="-90" color="#2e4466" scale visible ocean></a-ocean>
+      <!-- SOUNDS -->
+      <!-- <a-entity sound="src: #water; autoplay: false; loop: true; volume: 0.2;"></a-entity> -->
+      <!-- STAR (UNCLICKABLE) -->
+      <a-entity star-system="count: 1000; radius: 150; depth: 200"></a-entity>
+    </a-entity>
+
+    <!-- STAR (CLICKABLE) -->
+    <a-entity link="href: https://eddsonjose.github.io/final_project/proxima_centauri.html" position="0 10 -20" rotation="15" mixin="star">
+      <a-text value="Proxima Centauri" align="center" color="white" scale="30 30" position="0 15 0" ></a-text>
+      <a-text value="$899,000 - $1,100,000" align="center" color="white" scale="30 30" position="0 -15 0" ></a-text></a-entity>
+    <a-entity link="href: https://eddsonjose.github.io/final_project/gliese.html" position="14 20 -3" rotation="35 -85" mixin="star">
+      <a-text value="Gliese 11 667 C" align="center" color="white" scale="30 30" position="0 15 0"></a-text>
+      <a-text value="$775,000 - $1,100,000" align="center" color="white" scale="30 30" position="0 -15 0" ></a-text></a-entity>
+    <a-entity link="href: https://eddsonjose.github.io/final_project/kepler.html" position="-21 15 -2" rotation="0 90" mixin="star">
+      <a-text value="Kepler-442" align="center" color="white" scale="30 30" position="0 15 0"></a-text>
+      <a-text value="$649,000 - $1,099,000" align="center" color="white" scale="30 30" position="0 -15 0" ></a-text></a-entity>
+    <a-entity link="href: https://eddsonjose.github.io/final_project/wolf.html" position="-12 20 -14" rotation="20 35" mixin="star">
+      <a-text value="Wolf 1061" align="center" color="white" scale="30 30" position="0 15 0"></a-text>
+      <a-text value="$650,000 - $1,298,000" align="center" color="white" scale="30 30" position="0 -15 0" ></a-text></a-entity>
+    <a-entity link="href: https://eddsonjose.github.io/final_project/kapteyn.html" position="11 17 25" rotation="15 200" mixin="star">
+      <a-text value="Kapteyn" align="center" color="white" scale="30 30" position="0 15 0"></a-text>
+      <a-text value="$849,000 - $999,950" align="center" color="white" scale="30 30" position="0 -15 0" ></a-text></a-entity>
+    <a-entity link="href: https://eddsonjose.github.io/final_project/luyten.html" position="0.3 30 -3" rotation="90" mixin="star">
+      <a-text value="Luyten's Star" align="center" color="white" scale="30 30" position="0 15 0"></a-text>
+      <a-text value="$650,000 - $975,000" align="center" color="white" scale="30 30" position="0 -15 0" ></a-text></a-entity>
+    <a-entity link="href: https://eddsonjose.github.io/final_project/trappist.html" position="-10 30 15" rotation="45 160" mixin="star">
+      <a-text value="TRAPPIST-1" align="center" color="white" scale="30 30" position="0 15 0"></a-text>
+      <a-text value="$749,000 - $1,698,000" align="center" color="white" scale="30 30" position="0 -15 0" ></a-text></a-entity>
+
+    <!-- CURSOR -->
+    <a-camera wasd-controls-enabled="false" look-controls="pointerLockEnabled: true">
+      <a-cursor fuse="false" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.005" material="color: white; shader: flat"></a-cursor>
+    </a-camera>
+
+
+
+  </a-scene>
+
+</body>
+
+</html>
